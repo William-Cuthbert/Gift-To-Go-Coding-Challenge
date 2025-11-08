@@ -1,4 +1,4 @@
-package com.gift2go;
+package com.gift2go.dto;
 
 import java.util.UUID;
 

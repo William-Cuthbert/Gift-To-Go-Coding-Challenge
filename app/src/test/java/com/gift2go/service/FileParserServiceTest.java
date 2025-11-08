@@ -1,8 +1,11 @@
-package com.gift2go;
+package com.gift2go.service;
+
+import com.gift2go.exception.FileParserException;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
+
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,7 +24,7 @@ public class FileParserServiceTest {
         String invalidContent = "invalid_line_without_separators";
         MultipartFile mockFile = new MockMultipartFile("file", "EntryFile.txt",
                 "text/plain", invalidContent.getBytes(StandardCharsets.UTF_8));
-        assertThrows(IllegalArgumentException.class, () -> parser.parse(mockFile));
+        assertThrows(FileParserException.class, () -> parser.parse(mockFile));
     }
 
     @Test
