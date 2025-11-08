@@ -1,4 +1,4 @@
-package com.gift2go;
+package com.gift2go.controller;
 
 import com.gift2go.service.FileService;
 

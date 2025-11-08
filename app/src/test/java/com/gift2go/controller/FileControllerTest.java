@@ -1,6 +1,5 @@
 package com.gift2go.controller;
 
-import com.gift2go.FileController;
 import com.gift2go.service.FileService;
 
 import org.junit.jupiter.api.Test;
